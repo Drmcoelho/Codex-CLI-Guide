@@ -28,6 +28,9 @@ fi
 "$(dirname "$0")/profile-select.sh"
 "$(dirname "$0")/link-dotfiles.sh"
 "$(dirname "$0")/macos-defaults.sh"
+if [[ -f "$(dirname "$0")/ssh-setup.sh" ]]; then
+  "$(dirname "$0")/ssh-setup.sh"
+fi
 
 if [[ -f "$(dirname "$0")/vscode.sh" ]]; then
   "$(dirname "$0")/vscode.sh"

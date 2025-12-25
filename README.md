@@ -52,6 +52,7 @@ BREWFILE=./Brewfile.teaching ./scripts/brew.sh
 - Installs Homebrew and packages from a selected Brewfile
 - Applies macOS defaults (Finder, Dock, keyboard)
 - Links dotfiles into your home directory
+- Sets up SSH key + GitHub SSH config (if `gh` is authenticated)
 - Optionally installs VS Code extensions (if `code` CLI is available)
 
 ## First-time personalization
