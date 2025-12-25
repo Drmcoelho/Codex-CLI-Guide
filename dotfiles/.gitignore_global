@@ -1,0 +1,14 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor artifacts
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Env files
+.env
+.env.local

@@ -1,0 +1,16 @@
+# Teaching / presentation focused
+brew "git"
+brew "gh"
+brew "ripgrep"
+brew "fd"
+brew "jq"
+brew "bat"
+brew "eza"
+
+cask "visual-studio-code"
+cask "iterm2"
+cask "google-chrome"
+cask "slack"
+cask "zoom"
+cask "obs"
+cask "rectangle"

@@ -1,0 +1,3 @@
+editorconfig.editorconfig
+esbenp.prettier-vscode
+eamodio.gitlens

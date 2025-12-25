@@ -1,0 +1,11 @@
+{
+  "editor.fontFamily": "Fira Code, Menlo, Monaco, monospace",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "boundary",
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "terminal.integrated.fontFamily": "MesloLGS NF, Menlo, Monaco, monospace",
+  "workbench.startupEditor": "none"
+}
