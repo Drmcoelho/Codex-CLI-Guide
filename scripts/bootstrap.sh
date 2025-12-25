@@ -31,6 +31,12 @@ fi
 if [[ -f "$(dirname "$0")/ssh-setup.sh" ]]; then
   "$(dirname "$0")/ssh-setup.sh"
 fi
+if [[ -f "$(dirname "$0")/iterm2-setup.sh" ]]; then
+  "$(dirname "$0")/iterm2-setup.sh"
+fi
+if [[ -f "$(dirname "$0")/rectangle-setup.sh" ]]; then
+  "$(dirname "$0")/rectangle-setup.sh"
+fi
 
 if [[ -f "$(dirname "$0")/vscode.sh" ]]; then
   "$(dirname "$0")/vscode.sh"

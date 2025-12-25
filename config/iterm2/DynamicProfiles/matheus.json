@@ -1,0 +1,16 @@
+{
+  "Profiles": [
+    {
+      "Name": "Matheus",
+      "Guid": "F6B2C5C4-7F19-4A4B-8E2E-1C2B3D4E5F60",
+      "Dynamic Profile Parent Name": "Default",
+      "Normal Font": "Menlo-Regular 13",
+      "Use Bold Font": true,
+      "Use Italic Font": true,
+      "Cursor Type": 2,
+      "Blinking Cursor": false,
+      "Scrollback Lines": 10000,
+      "Right Option Key Sends": 2
+    }
+  ]
+}

@@ -27,7 +27,7 @@ When you run the bootstrap, you will choose one profile:
    - Small, fast base: core CLI + VS Code + iTerm2.
    - Best for a clean baseline or later customization.
 
-## Examples (5)
+## Examples (7)
 
 ```sh
 # 1) Run full bootstrap with interactive profile selection
@@ -44,6 +44,13 @@ BREWFILE=./Brewfile.teaching ./scripts/brew.sh
 
 # 5) Re-apply macOS defaults only
 ./scripts/macos-defaults.sh
+
+# 6) Apply presentation defaults (Dock size, visibility, etc.)
+./scripts/macos-defaults-presentation.sh
+
+# 7) Apply iTerm2 profile + Rectangle tweaks only
+./scripts/iterm2-setup.sh
+./scripts/rectangle-setup.sh
 ```
 
 ## What this does
@@ -53,6 +60,8 @@ BREWFILE=./Brewfile.teaching ./scripts/brew.sh
 - Applies macOS defaults (Finder, Dock, keyboard)
 - Links dotfiles into your home directory
 - Sets up SSH key + GitHub SSH config (if `gh` is authenticated)
+- Links an iTerm2 dynamic profile
+- Applies Rectangle tweaks (gaps + launch on login)
 - Optionally installs VS Code extensions (if `code` CLI is available)
 
 ## First-time personalization
