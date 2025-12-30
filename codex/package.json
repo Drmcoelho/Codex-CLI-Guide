@@ -1,0 +1,20 @@
+{
+  "name": "codex",
+  "version": "1.0.0",
+  "description": "Bem-vindo ao projeto Codex! Este repositório é dedicado a explorar e documentar o uso do GitHub Copilot CLI, Gemini CLI e Xcode CLI, com foco em suas funcionalidades interativas e na integração entre eles.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.26"
+  }
+}
