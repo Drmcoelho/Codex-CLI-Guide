@@ -32,6 +32,12 @@ export default defineConfig({
         items: [
           { text: 'Exemplos Práticos', link: '/integracao' }
         ]
+      },
+      {
+        text: 'Melhores Práticas',
+        items: [
+          { text: 'Combinando o Poder das CLIs', link: '/best-practices' }
+        ]
       }
     ]
   }
