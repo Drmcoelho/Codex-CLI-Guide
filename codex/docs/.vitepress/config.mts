@@ -39,6 +39,12 @@ export default defineConfig({
         items: [
           { text: 'Combinando o Poder das CLIs', link: '/best-practices' }
         ]
+      },
+      {
+        text: 'Configuração do Site',
+        items: [
+          { text: 'Domínio Personalizado', link: '/custom-domain' }
+        ]
       }
     ]
   }
