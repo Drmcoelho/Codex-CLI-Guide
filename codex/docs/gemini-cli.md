@@ -98,3 +98,88 @@ gemini generate "O que é um algoritmo de ordenação 'Bubble Sort'?"
 O Gemini fornecerá uma explicação concisa sobre o Bubble Sort.
 
 Lembre-se que a qualidade e o formato das respostas podem variar. Experimente diferentes prompts para obter os melhores resultados!
+
+## Conteúdo Avançado: Tradução, Sumarização e Geração de Documentação
+
+O Gemini CLI pode ser uma ferramenta inestimável para tarefas que vão além da simples geração de código ou conversação, auxiliando no processamento e compreensão de informações.
+
+### Tradução de Texto e Código
+
+Você pode usar o Gemini para traduzir trechos de texto ou até mesmo comentários em código.
+
+**Exemplo:** Traduzir uma frase do inglês para o português.
+
+```bash
+gemini generate "Translate 'Hello, how are you today?' to Portuguese."
+```
+
+O Gemini pode retornar:
+
+```
+"Olá, como você está hoje?"
+```
+
+**Exemplo:** Traduzir comentários em um trecho de código.
+
+Imagine que você tem um arquivo `main.py` com um código comentado em inglês:
+
+```python
+# main.py
+def calculate_area(radius):
+    # Calculates the area of a circle
+    # Input: radius (float)
+    # Output: area (float)
+    return 3.14159 * radius * radius
+```
+
+Você pode pedir ao Gemini para traduzir os comentários para o português:
+
+```bash
+gemini generate "Traduzir os comentários do código Python abaixo para o português:\n\n# main.py\ndef calculate_area(radius):\n    # Calculates the area of a circle\n    # Input: radius (float)\n    # Output: area (float)\n    return 3.14159 * radius * radius"
+```
+
+O Gemini retornaria o código com os comentários traduzidos.
+
+### Sumarização de Código
+
+Para entender rapidamente a funcionalidade de um bloco de código complexo, você pode pedir ao Gemini para sumarizá-lo.
+
+**Exemplo:** Sumarizar um trecho de código JavaScript.
+
+```bash
+gemini generate "Sumarize o seguinte código JavaScript em uma frase:\n\nfunction factorial(n) {\n  if (n === 0 || n === 1) {\n    return 1;\n  } else {\n    return n * factorial(n - 1);\n  }\n}"
+```
+
+O Gemini poderia retornar:
+
+```
+"Esta função JavaScript recursivamente calcula o fatorial de um número inteiro."
+```
+
+### Geração de Documentação
+
+O Gemini pode ajudar a criar a documentação inicial para suas funções ou módulos, economizando tempo e garantindo consistência.
+
+**Exemplo:** Gerar um docstring para uma função Python.
+
+```bash
+gemini generate "Gere um docstring para a função Python:\n\ndef find_max(numbers):\n    # Finds the maximum number in a list of numbers\n    pass"
+```
+
+O Gemini poderia retornar:
+
+```python
+"""
+find_max(numbers)
+
+Encontra o número máximo em uma lista de números.
+
+Args:
+    numbers (list): Uma lista de números inteiros ou floats.
+
+Returns:
+    int ou float: O número máximo na lista. Retorna None se a lista for vazia.
+"""
+```
+
+Esses recursos mostram o potencial do Gemini CLI como um assistente de IA para aprimorar a produtividade e a qualidade do trabalho em diversas frentes de desenvolvimento.
