@@ -1,8 +1,11 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "Codex",
+  title: "Codex - Guias de CLI",
   description: "Explorando GitHub Copilot, Gemini CLI e Xcode CLI",
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }]
+  ],
   themeConfig: {
     nav: [
       { text: 'Início', link: '/' },
