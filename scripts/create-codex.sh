@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Script to automate the creation of a VitePress-based "Codex" project
 # This script sets up a documentation site with pre-filled content about
