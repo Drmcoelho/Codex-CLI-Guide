@@ -31,4 +31,20 @@ Dominar o GitHub Copilot CLI, Gemini CLI e Xcode CLI individualmente já é um g
 *   **Gerar Documentação com Gemini**: Use o Gemini para gerar descrições, READMEs ou até mesmo comentários para suas funções.
 *   **Manter o Codex Atualizado**: Este próprio projeto "Codex" é um exemplo de como documentar suas descobertas. Mantenha-o atualizado com novas dicas e truques que você aprender.
 
+## 6. Resolução de Problemas (Troubleshooting)
+
+Mesmo com as melhores ferramentas, problemas podem ocorrer. Aqui estão soluções para cenários comuns:
+
+*   **Copilot CLI - Falha na Autenticação**:
+    *   *Sintoma*: `Error: You are not signed in.`
+    *   *Solução*: Execute `gh auth login` para renovar suas credenciais do GitHub CLI, que o Copilot utiliza.
+
+*   **Gemini CLI - Erro de Quota (429)**:
+    *   *Sintoma*: `ResourceExhausted` ou erros de limite de taxa.
+    *   *Solução*: Verifique sua cota no Google AI Studio. Implemente um "backoff exponencial" (espera progressiva) em seus scripts se estiver fazendo muitas requisições seguidas.
+
+*   **Xcode CLI - "Command not found"**:
+    *   *Sintoma*: O terminal não reconhece `xcodebuild` ou `xcrun`.
+    *   *Solução*: Redefina o caminho das ferramentas com `sudo xcode-select --reset` ou aponte manualmente com `sudo xcode-select -s /Applications/Xcode.app`.
+
 Ao aplicar essas práticas, você transformará seu terminal em um ambiente de desenvolvimento ainda mais poderoso e eficiente, alavancando a inteligência artificial para otimizar cada etapa do processo.
