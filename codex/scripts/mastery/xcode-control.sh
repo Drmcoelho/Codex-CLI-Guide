@@ -6,6 +6,15 @@
 echo "📱 Xcode CLI Controller"
 echo "======================="
 
+# Check environment
+if ! xcrun simctl list > /dev/null 2>&1; then
+    echo "❌ Erro: 'simctl' não encontrado ou inoperante."
+    echo "Diagnóstico: Seu xcode-select provavelmente aponta para '/Library/Developer/CommandLineTools'."
+    echo "Solução: Aponte para o Xcode completo rodando:"
+    echo "sudo xcode-select -s /Applications/Xcode.app"
+    exit 1
+fi
+
 # 1. Listar dispositivos disponíveis (booted e shutdown)
 echo "\n🔍 Dispositivos Disponíveis:"
 xcrun simctl list devices available | grep "iPhone" | head -n 5
