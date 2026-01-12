@@ -32,6 +32,7 @@ export default defineConfig({
       {
         text: 'Integração',
         items: [
+          { text: 'Mestria CLI (Scripts)', link: '/cli-mastery' },
           { text: 'Exemplos Práticos', link: '/integracao' },
           { text: 'Exemplos de Scripts Reais', link: '/examples' }
         ]
