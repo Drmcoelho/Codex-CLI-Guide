@@ -22,17 +22,17 @@ else
     sed -i '' '/_MEGA_GH_COMP_LOADED/d' "$TARGET_TOOLS" 2>/dev/null
     sed -i '' '/eval "$(gh completion/d' "$TARGET_TOOLS" 2>/dev/null
     
-    # Inserir o novo bloco no início ou onde estava o antigo é complexo com sed puro.
-    # Vamos fazer append do bloco novo se ele não existir, mas o ideal seria editar manualmente.
-    # Como não posso editar, vou instruir o usuário ou fazer um append seguro.
+    # Inserir o novo bloco no final de forma segura
     
-    cat <<EOT >> "$TARGET_TOOLS"
+    cat <<'EOT' >> "$TARGET_TOOLS"
 
 # --- Otimização Codex ---
 if command -v gh >/dev/null 2>&1; then
+  # Otimização: Cache de completion
   _GH_COMP_CACHE="${CLI_CACHE_ROOT:-$HOME/Library/Caches/cli_bootstrap}/gh_completion.zsh"
+  
   if [ ! -f "$_GH_COMP_CACHE" ]; then
-    mkdir -p "${$_GH_COMP_CACHE:h}" 2>/dev/null
+    mkdir -p "${_GH_COMP_CACHE:h}" 2>/dev/null
     gh completion -s zsh > "$_GH_COMP_CACHE" 2>/dev/null || true
   fi
   [ -s "$_GH_COMP_CACHE" ] && source "$_GH_COMP_CACHE"
