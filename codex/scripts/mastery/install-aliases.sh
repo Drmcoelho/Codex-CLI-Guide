@@ -1,38 +1,49 @@
 #!/bin/zsh
 
 # install-aliases.sh
-# Configura os superpoderes do Copilot e Gemini no seu Zsh.
+# Instala o Profile Codex Mastery no seu Mega Zsh Modular.
 
-echo "🚀 Iniciando configuração do CLI Mastery..."
+echo "🚀 Instalando Codex Mastery Profile..."
 
-ZSHRC="$HOME/.zshrc"
+# Caminhos
+REPO_DIR="${0:a:h}"
+PROFILE_SOURCE="$REPO_DIR/codex_mastery_profile.zsh"
+ZSH_PROFILES_DIR="$HOME/.config/zsh/profiles"
+PROFILE_DEST="$ZSH_PROFILES_DIR/codex_mastery.zsh"
+ZPROF_CTL="$HOME/.config/zsh/60_profiles_loader.zsh"
 
-# 1. Configurar GitHub Copilot Aliases
-echo "\n--- 1. Configurando GitHub Copilot Aliases ---"
-if grep -q "gh copilot alias" "$ZSHRC"; then
-    echo "✅ Aliases do Copilot já estão configurados."
-else
-    echo "🔧 Adicionando aliases do Copilot ao .zshrc..."
-    echo "" >> "$ZSHRC"
-    echo "# GitHub Copilot CLI Aliases" >> "$ZSHRC"
-    echo 'eval "$(gh copilot alias -- zsh)"' >> "$ZSHRC"
-    echo "✅ Adicionado! (Reinicie o terminal para usar '??', 'git?', 'gh?')"
+# 1. Verificar diretório de profiles
+if [ ! -d "$ZSH_PROFILES_DIR" ]; then
+    echo "❌ Diretório de profiles não encontrado: $ZSH_PROFILES_DIR"
+    echo "Certifique-se que sua estrutura Mega Zsh está correta."
+    exit 1
 fi
 
-# 2. Configurar Alias para o script do Gemini
-echo "\n--- 2. Configurando Alias do Gemini ---"
-SCRIPT_DIR="${0:a:h}"
-GEMINI_SCRIPT="$SCRIPT_DIR/gemini-pipe.sh"
+# 2. Criar Symlink (Mantém o profile atualizado com o repo)
+echo "🔗 Linkando profile..."
+ln -sf "$PROFILE_SOURCE" "$PROFILE_DEST"
 
-if grep -q "alias gemini=" "$ZSHRC"; then
-    echo "✅ Alias 'gemini' já existe."
+if [ -L "$PROFILE_DEST" ]; then
+    echo "✅ Profile linkado em: $PROFILE_DEST"
 else
-    echo "🔧 Criando alias 'gemini' apontando para nossos scripts..."
-    echo "" >> "$ZSHRC"
-    echo "# Gemini CLI Wrapper" >> "$ZSHRC"
-    echo "alias gemini='$GEMINI_SCRIPT'" >> "$ZSHRC"
-    echo "✅ Alias 'gemini' criado!"
+    echo "❌ Falha ao criar link simbólico."
+    exit 1
 fi
 
-echo "\n✨ Instalação concluída! Para aplicar as mudanças agora, execute:"
+# 3. Habilitar via zprofctl (Simulando a lógica pois zprofctl é uma função de shell, não um script executável isolado)
+ENABLED_FILE="$HOME/.config/zsh/enabled_profiles"
+PROFILE_NAME="codex_mastery"
+
+if grep -q "^$PROFILE_NAME$" "$ENABLED_FILE" 2>/dev/null; then
+    echo "✅ Profile '$PROFILE_NAME' já estava habilitado."
+else
+    echo "🔧 Habilitando profile '$PROFILE_NAME'..."
+    echo "$PROFILE_NAME" >> "$ENABLED_FILE"
+    echo "✅ Profile habilitado!"
+fi
+
+echo "\n✨ Instalação Concluída!"
+echo "Para ativar as mudanças agora, rode:"
 echo "source ~/.zshrc"
+echo "Ou reinicie seu terminal."
+
